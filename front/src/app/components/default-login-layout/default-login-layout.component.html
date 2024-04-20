@@ -1,14 +1,20 @@
-<main>
-    <section>
-        <img src="/assets/svg/logo.svg" alt="">
-        <h2></h2>
-        <button></button>
-        <div>
-            <span>or</span>
+<main class="flex flex-row items-center justify-center h-full">
+    <section class="form-section flex flex-col items-center justify-center h-full py-0 px-9">
+        <img src="/assets/svg/logo.svg" class="mb-8">
+        <h2 class="text-xl font-bold mb-11">{{title}}</h2>
+        <ng-content></ng-content>
+        <div class="btn-wrapper flex flex-col items-center justify-center w-full gap-7">
+            <button class="bg-violet-600 text-white">{{ primaryBtnText }}</button>
+            <div class="flex items-center justify-center gap-5 w-full text-slate-300 font-normal">
+                <div class="flex-grow h-[1px] bg-slate-300"></div>
+                <span>OR</span>
+                <div class="flex-grow h-[1px] bg-slate-300"></div>
+            </div>
+            <button class="border border-solid border-violet-600 text-violet-600">{{ secondaryBtnText }}</button>
         </div>
-        <button></button>
+
     </section>
-    <section>
+    <section class="main-section flex flex-col items-center justify-center gap-2 grow bg-gray-100 h-full">
         <h1>You Should, MoveIt</h1>
         <img src="/assets/svg/main-ilustration.svg" alt="">
     </section>
